@@ -20,7 +20,7 @@ namespace Siya.Madokwe.RestAPI.Tests
                 var actor = new Actor(name: "Andy", logger: new ConsoleLogger());
                 actor.Can(TheCocktailDbAPI.UsingBaseUrl());
 
-                featureContext[StepConstants.ActorInstance] = actor;
+                featureContext[Constants.ActorInstance] = actor;
             }
             catch (Exception ex)
             {

@@ -19,7 +19,7 @@ namespace Siya.Madokwe.RestAPI.Tests.Steps
         public IngredientsStepDefinitions(FeatureContext featureContext)
         {
             _featureContext = featureContext;
-            _actor = (Actor)featureContext[StepConstants.ActorInstance];
+            _actor = (Actor)featureContext[Constants.ActorInstance];
         }
 
         [Given(@"I search ingredient using '([^']*)'")]
@@ -28,18 +28,18 @@ namespace Siya.Madokwe.RestAPI.Tests.Steps
             var request = IngredientsDbRequests.GetIngredientByName(ingredient);
             var response = _actor.Calls(Rest<TheCocktailDbAPI>.Request<IngredientResponse>(request));
             response.StatusCode.Should().Be(HttpStatusCode.OK);
-            _featureContext[StepConstants.Name] = ingredient;
-            _featureContext[StepConstants.IngredientResponse] = response.Data;
+            _featureContext[Constants.Name] = ingredient;
+            _featureContext[Constants.IngredientResponse] = response.Data;
         }
         [When(@"I verify ingridien search result match search")]
         public void ThenIVerifyIngridienSearchResultMatchSearch()
         {
-            var name = _featureContext[StepConstants.Name].ToString();
-            var ingredientResponse = (IngredientResponse)_featureContext[StepConstants.IngredientResponse];
+            var name = _featureContext[Constants.Name].ToString();
+            var ingredientResponse = (IngredientResponse)_featureContext[Constants.IngredientResponse];
             (ingredientResponse.ingredients.Count >= 1).Should().BeTrue();
             foreach (var drink in ingredientResponse.ingredients)
             {
-                _featureContext[StepConstants.Ingredient] = drink;
+                _featureContext[Constants.Ingredient] = drink;
                 (drink.strIngredient.ToLower().Contains(name.ToLower())).Should().BeTrue();
             }
         }
@@ -59,10 +59,10 @@ namespace Siya.Madokwe.RestAPI.Tests.Steps
         }
         private bool IsAcholic()
         {
-            var ingredient = (Ingredient)_featureContext[StepConstants.Ingredient];
+            var ingredient = (Ingredient)_featureContext[Constants.Ingredient];
             bool IsAlcholic = false;
 
-            if (ingredient.strAlcohol.ToLower() == StepConstants.Yes.ToLower() && !string.IsNullOrEmpty(ingredient.strABV.ToString()))
+            if (ingredient.strAlcohol.ToLower() == Constants.Yes.ToLower() && !string.IsNullOrEmpty(ingredient.strABV.ToString()))
                 IsAlcholic = true;
             return IsAlcholic;
         }

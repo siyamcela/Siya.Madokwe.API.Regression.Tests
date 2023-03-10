@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Siya.Madokwe.RestAPI.Tests.Constansts
 {
-    public static class StepConstants
+    public static class Constants
     {
         public const string ActorInstance = "ActorInstance";
         public const string CocktailDbResponse = "CocktailDbResponse";
