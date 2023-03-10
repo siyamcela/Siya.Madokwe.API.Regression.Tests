@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33424.131
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Siya.Madokwe.Infrastructure", "Siya.Madokwe.Infrastructure\Siya.Madokwe.Infrastructure.csproj", "{0A84DC20-1DEC-41CB-9A3E-A2A330E933B7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Siya.Madokwe.RestAPI.Tests", "Siya.Madokwe.RestAPI.Tests\Siya.Madokwe.RestAPI.Tests.csproj", "{D15972A7-8E73-4E9C-901D-3A96797D2C3C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0A84DC20-1DEC-41CB-9A3E-A2A330E933B7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0A84DC20-1DEC-41CB-9A3E-A2A330E933B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0A84DC20-1DEC-41CB-9A3E-A2A330E933B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0A84DC20-1DEC-41CB-9A3E-A2A330E933B7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D15972A7-8E73-4E9C-901D-3A96797D2C3C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D15972A7-8E73-4E9C-901D-3A96797D2C3C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D15972A7-8E73-4E9C-901D-3A96797D2C3C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D15972A7-8E73-4E9C-901D-3A96797D2C3C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2EE29D05-BDD4-498B-8323-73B7A9137A0B}
+	EndGlobalSection
+EndGlobal
